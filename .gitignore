@@ -1,0 +1,10 @@
+.ipynb_checkpoints/
+__pycache__/*
+doc/*
+MNIST_data/*
+models/*.ipynb
+models/.ipynb_checkpoints
+models/__pycache__/*
+tmp/
+README.txt
+log.txt
