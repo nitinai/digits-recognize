@@ -10,14 +10,14 @@ Flask_Cors == 3.0.8
 # models\cnn.py: 6
 Pillow == 5.4.1
 
-gunicorn==19.9.0
+#gunicorn==19.9.0
 
 # models\cnn.py: 5
 numpy == 1.16.2
 
 # models\cnn.py: 11
-# torch == 1.1.0
 https://download.pytorch.org/whl/cpu/torch-1.1.0-cp37-cp37m-linux_x86_64.whl
 
 # models\cnn.py: 10
-torchvision == 0.3.0
+https://download.pytorch.org/whl/cpu/torchvision-0.3.0-cp37-cp37m-linux_x86_64.whl
+
