@@ -6,7 +6,7 @@ import base64
 import random
 from flask import Flask, render_template, request
 from flask_cors import CORS
-from models.cnn import *
+#from models.cnn import *
 #from cnn import single_predict
 
 #import logging
@@ -15,12 +15,13 @@ app = Flask(__name__)
 CORS(app, headers=['Content-Type'])
 #logging.getLogger('flask_cors').level = logging.DEBUG
 
+'''
 model = CNN()
 if not os.path.exists('models/model.pkl'):
 	print("Model file does not exists at models/model.pkl")
 model.load_state_dict(torch.load("models/model.pkl", map_location='cpu'))
 model.eval()
-
+'''
 @app.route("/", methods=["GET"])
 def index_page():
 	return render_template('index.html')
@@ -41,7 +42,7 @@ def predict():
 			image_encoded = image_b64.split(',')[1]
 			image = base64.decodebytes(image_encoded.encode('utf-8'))
 			#f.write(f"image {image}\n")
-			prediction = single_predict(model,image)
+			prediction = 1#single_predict(model,image)
 
 	return json.dumps(prediction)
 

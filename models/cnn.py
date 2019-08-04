@@ -1,6 +1,6 @@
 __author__ = "Nitin Patil"
 
-import os
+'''import os
 import uuid
 import numpy as np
 from PIL import Image
@@ -161,3 +161,4 @@ def single_predict(model, image):
         f.write(f"test_pred Shape : {test_pred.shape}\n")
         
         return test_pred.item()
+'''
