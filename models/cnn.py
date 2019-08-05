@@ -1,6 +1,7 @@
 __author__ = "Nitin Patil"
 
 import os
+import io
 import numpy as np
 from PIL import Image
 
@@ -89,14 +90,15 @@ class CNN(torch.nn.Module):
         return logits, probas
     
     
-def preprocess_image(image):
+def preprocess_image(image_bytes):
     """
         Save and open an image and resize to 28x28
         Return numpy array
     """
+    # convert image bytes data to PIL image
+    img = Image.open(io.BytesIO(image_bytes))
     # open and convert the image to grayscale
-    img = image.convert(mode='L')
-    
+    img = img.convert(mode='L')
     # create a thumbnail and preserve aspect ratio
     img.thumbnail((28,28))
     return np.asarray(img)
