@@ -5,7 +5,7 @@
 Flask == 1.0.2
 
 # app.py: 8
-Flask_Cors == 3.0.8
+Flask_Cors == 3.0.9
 
 # models\cnn.py: 6
 Pillow == 5.4.1
